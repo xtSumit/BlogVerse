@@ -76,7 +76,7 @@ namespace BlogVerse.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteAsync(EditTagRequest model)
+        public async Task<IActionResult> Delete(EditTagRequest model)
         {
             var tag = await tagRepository.DeleteAsync(model.Id);
             if(tag is not null)

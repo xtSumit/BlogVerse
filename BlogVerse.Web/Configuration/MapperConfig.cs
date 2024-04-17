@@ -11,6 +11,13 @@ namespace BlogVerse.Web.Configuration
             CreateMap<Tag, AddTagRequest>().ReverseMap();
             CreateMap<Tag, EditTagRequest>().ReverseMap();
             CreateMap<Tag, TagRequest>().ReverseMap();
+            CreateMap<BlogPost, AddBlogPostRequest>().ReverseMap();
+            CreateMap<BlogPost, BlogPostRequest>().ReverseMap();
+            CreateMap<BlogPost, EditBlogPostRequest>().
+                ForMember(dest => dest.Tags, opt => opt.Ignore());
+
+            CreateMap<EditBlogPostRequest, BlogPost>();
+
         }
     }
 }

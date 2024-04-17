@@ -1,6 +1,6 @@
-﻿namespace BlogVerse.Web.Models.Domain
+﻿namespace BlogVerse.Web.Models.ViewModels
 {
-    public class BlogPost
+    public class BlogPostRequest
     {
         public Guid Id { get; set; }
         public string Heading { get; set; }
@@ -12,9 +12,5 @@
         public string Author { get; set; }
         public DateTime PublishedDate { get; set; }
         public bool Visible { get; set; }
-
-        //Navigation Property for Tags
-        public ICollection<Tag> Tags { get; set; }
-       
     }
 }
